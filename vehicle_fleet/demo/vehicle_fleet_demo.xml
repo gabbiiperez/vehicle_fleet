@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="1" model="vehicle.fleet">
+            <field name="brand">Chevrolet</field>
+            <field name="model">Classic</field>
+            <field name="mileage">128065</field>
+            <field name="purchase_date">2019-05-30</field>
+            <field name="purchase_value">705000</field>
+            <field name="price">1570000</field>
+            <field name="description">Purchase of Chevrolet Classic used</field>
+        </record>
+        <record id="2" model="vehicle.fleet">
+            <field name="brand">Fiat</field>
+            <field name="model">Uno</field>
+            <field name="mileage">160789</field>
+            <field name="purchase_date">2020-10-23</field>
+            <field name="purchase_value">200000</field>
+            <field name="price">550000</field>
+        </record>
+        <record id="3" model="vehicle.fleet">
+            <field name="brand">Renault</field>
+            <field name="model">Logan</field>
+            <field name="mileage">0</field>
+            <field name="purchase_date">2021-01-05</field>
+            <field name="purchase_value">1600500</field>
+            <field name="price">2500000</field>
+            <field name="description">Purchase of Renault Logan 0km</field>
+        </record>
+        <record id="4" model="vehicle.fleet">
+            <field name="brand">Toyota</field>
+            <field name="model">Yaris</field>
+            <field name="mileage">43000</field>
+            <field name="purchase_date">2021-03-14</field>
+            <field name="purchase_value">2500000</field>
+            <field name="price">3300500</field>
+        </record>
+	<record id="5" model="vehicle.fleet">
+            <field name="brand">Peugeot</field>
+            <field name="model">504</field>
+            <field name="mileage">29900</field>
+            <field name="purchase_date">2020-11-09</field>
+            <field name="purchase_value">167582</field>
+            <field name="price">283000</field>
+        </record>
+   </data>
+</odoo>
+

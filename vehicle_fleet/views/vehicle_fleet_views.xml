@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="vehicle_fleet_tree">
+        <field name="name">vehicle.fleet.tree</field>
+        <field name="model">vehicle.fleet</field>
+        <field name="arch" type="xml">
+            <tree string="Vehicle Fleet">
+                <field name="brand"/>
+                <field name="model"/>
+                <field name="mileage"/>
+	        <field name="purchase_date"/>
+		<field name="purchase_value"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="vehicle_fleet_form">
+        <field name="name">vehicle.fleet.form</field>
+        <field name="model">vehicle.fleet</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Fleet">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="brand"/>
+                            <field name="model"/>
+			    <field name="price"/>
+                        </group>
+			<group>
+                            <field name="purchase_date"/>
+                            <field name="purchase_value"/>
+                            <field name="mileage"/>
+			    <field name="service"/>
+                        </group>
+                        <group>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description" nolabel="1"/>
+                        </page>
+		    </notebook>
+	        </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="vehicle_fleet_view_search" model="ir.ui.view">
+        <field name="name">vehicle.fleet.view.search</field>
+        <field name="model">vehicle.fleet</field>
+        <field name="arch" type="xml">
+            <search string="Search Vehicle Fleet">
+                 <field string="Brand" name="brand"/>
+                 <field string="Model" name="model"/>
+                 <separator/>
+ 	         <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_vehicle_fleet">
+        <field name="name">Vehicle Fleet</field>
+        <field name="res_model">vehicle.fleet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="vehicle_fleet_view_search"/>
+        <field name="help" type="html">
+            <p>
+                Create a new vehicle fleet
+            </p>
+        </field>
+    </record>
+
+    <menuitem name="Vehicle Fleet" parent="" id="menu_vehicle_fleet" action="action_vehicle_fleet"/>
+
+</odoo>
+
