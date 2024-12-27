@@ -7,7 +7,7 @@ services:
     environment:
       - HOST=db  # Define el nombre del servicio que actúa como base de datos.
       - USER=odoo_user
-      - PASSWORD=Pelotas@1457
+      - PASSWORD=tu_pass
     depends_on:
       - db  # Asegura que el contenedor de PostgreSQL esté corriendo antes de iniciar Odoo.
     volumes:
@@ -17,7 +17,7 @@ services:
     image: postgres:17  # Utiliza la imagen oficial de PostgreSQL versión 13.
     environment:
       POSTGRES_USER: odoo_user  # Define el usuario para PostgreSQL.
-      POSTGRES_PASSWORD: Pelotas@1457  # Contraseña del usuario.
+      POSTGRES_PASSWORD: tu_pass  # Contraseña del usuario.
       POSTGRES_DB: odoo_db  # Nombre de la base de datos predeterminada.
 
 volumes:
