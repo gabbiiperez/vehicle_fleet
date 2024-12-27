@@ -6,6 +6,8 @@ services:
       - "8069:8069"  # Expone el puerto 8069 para acceder a Odoo desde el navegador.
     environment:
       - HOST=db  # Define el nombre del servicio que actúa como base de datos.
+      - USER=odoo_user
+      - PASSWORD=Pelotas@1457
     depends_on:
       - db  # Asegura que el contenedor de PostgreSQL esté corriendo antes de iniciar Odoo.
     volumes:
